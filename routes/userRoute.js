@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const userRoute = express.Router();
 const {createUser , deleteUser , getSingleUser , updateUser} = 
 require('../controller/userController');
@@ -9,7 +9,7 @@ userRoute.delete("/delete-student/:id", deleteUser)
 userRoute.patch("/update-student/:id", updateUser)
 
 
-module.exports = userRoute
+export default userRoute
 
 //finById camel casing
 //find_by_id snake casing
