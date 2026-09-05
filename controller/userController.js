@@ -1,4 +1,4 @@
-const userModel = require("../model/userModel.js")
+import userModel from "../model/userModel.js"
 
 /**
  * CRUD
@@ -8,7 +8,7 @@ const userModel = require("../model/userModel.js")
  * DELETE USER(DELETE)
  */
 //CREATE USER(POST)
-const createUser = async (req, res) => {
+export const createUser = async (req, res) => {
     try {
         const { name, email, RegNo } = req.body;
         const user = await userModel.create({
@@ -27,7 +27,7 @@ const createUser = async (req, res) => {
  
 
 //UPDATE USER:
- const getSingleUser = async (req, res) => {
+export const getSingleUser = async (req, res) => {
     try {
         const { id } = req.params;
         
@@ -49,7 +49,7 @@ const createUser = async (req, res) => {
 };
 
 //UPDATE USER:
- const updateUser = async (req, res) => {
+export const updateUser = async (req, res) => {
     try {
         const {id} = req.params
         const {name} = req.body
@@ -66,7 +66,7 @@ const createUser = async (req, res) => {
     }
 }
 
- const deleteUser = async (req, res) => {
+export const deleteUser = async (req, res) => {
     try {
         const {id} = req.params
         const deleteUser = await userModel.findByIdAndDelete(id)
@@ -81,9 +81,3 @@ const createUser = async (req, res) => {
     }
 }
 
-module.exports = {
-    createUser,
-    deleteUser,
-    getSingleUser,
-    updateUser
-}
