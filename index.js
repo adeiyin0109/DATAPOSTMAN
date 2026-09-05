@@ -1,10 +1,10 @@
- const dns = require("dns");
+ import dns from"dns";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 
-const express = require("express");
-const mongoose = require('mongoose');
-const userRoute = require("./routes/userRoute")
+import expressfrom "express";
+import mongoose from 'mongoose';
+import userRoute from"./routes/userRoute"
 
 
 const atlas_string = "mongodb+srv://adeyemianuoluwapo97_db_user:adeyemianuoluwapo97_db_user@cluster0.nh5rihi.mongodb.net/cohort8_db?appName=Cluster0"
