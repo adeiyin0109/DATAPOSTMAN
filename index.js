@@ -2,7 +2,7 @@
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 
-import expressfrom "express";
+import express from "express";
 import mongoose from 'mongoose';
 import userRoute from"./routes/userRoute"
 
