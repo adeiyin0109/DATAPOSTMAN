@@ -1,7 +1,7 @@
 import express from 'express';
 const userRoute = express.Router();
-const {createUser , deleteUser , getSingleUser , updateUser} = 
-require('../controller/userController');
+import {createUser , deleteUser , getSingleUser , updateUser} from
+'../controller/userController';
 
 userRoute.post("/new-student", createUser)
 userRoute.get("/get-one-student/:id", getSingleUser)
